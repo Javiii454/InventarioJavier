@@ -28,12 +28,15 @@ public class InventorySlots : MonoBehaviour
     {
         thisSlotButton = GetComponentInChildren<Button>();
         thisSlotButton.onClick.AddListener(InspectItem);
+
+        
     }
 
     void InspectItem()
     {
         if(slotItem != null)
         {
+
             closeButton.onClick.AddListener(CloseWindow);
 
             deleteButton.onClick.AddListener(DeleteItem);
@@ -53,7 +56,7 @@ public class InventorySlots : MonoBehaviour
 
     void CloseWindow()
     {
-
+        inspectWindow.SetActive(false);
     }
 
     void DeleteItem()
